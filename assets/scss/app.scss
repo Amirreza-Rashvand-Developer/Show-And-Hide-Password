@@ -1,0 +1,118 @@
+// ==== Add Font ====
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+// ==== Variables ====
+$firstColor: hsl(232, 54%, 43%);
+$textColor: hsl(232, 8%, 35%);
+$whiteColor: hsl(232, 100%, 99%);
+$bodyColor: hsl(232, 45%, 90%);
+$containerColor: hsl(232, 54%, 11%);
+
+
+// ==== Configuration ====
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    // 62.5% => 10px
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-family: "Poppins";
+    font-weight: 400;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: $bodyColor;
+}
+
+
+// ==== Start ====
+.input {
+    background-color: $containerColor;
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+    padding: 2rem 1.5rem;
+    position: relative;
+    width: 28rem;
+
+    .input__password {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        font-family: "Poppins";
+        color: $whiteColor;
+        z-index: 1;
+        width: 100%;
+
+        &::placeholder {
+            color: $whiteColor;
+        }
+    }
+
+    .input__lock {
+        margin-right: 1rem;
+        color: $whiteColor;
+        transition: .4s;
+    }
+
+    .input__lock,
+    .input__hide {
+        font-size: 2rem;
+        z-index: 1;
+    }
+
+    .input__hide {
+        color: $firstColor;
+        cursor: pointer;
+    }
+
+    .input__overlay {
+        width: 3.2rem;
+        height: 3.2rem;
+        background-color: $whiteColor;
+        border-radius: 50%;
+        position: absolute;
+        right: .85rem;
+        z-index: 0;
+        transition: .4s;
+    }
+}
+
+.overlay-content {
+    width: 100% !important;
+    height: 100% !important;
+    right: 0 !important;
+    border-radius: .5rem !important;
+    transition: .4s;
+
+    ~.input__lock {
+        color: $containerColor;
+    }
+
+    ~.input__password,
+    ~.input__password::placeholder {
+        color: $textColor;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .input {
+        width: 35rem;
+
+        .input__password {
+            width: 100%;
+        }
+    }
+}
+
+// ==== Finish ====

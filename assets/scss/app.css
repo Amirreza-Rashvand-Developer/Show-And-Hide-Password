@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: "Poppins";
+  font-weight: 400;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: hsl(232, 45%, 90%);
+}
+
+.input {
+  background-color: hsl(232, 54%, 11%);
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 2rem 1.5rem;
+  position: relative;
+  width: 28rem;
+}
+.input .input__password {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-family: "Poppins";
+  color: hsl(232, 100%, 99%);
+  z-index: 1;
+  width: 100%;
+}
+.input .input__password::-moz-placeholder {
+  color: hsl(232, 100%, 99%);
+}
+.input .input__password::placeholder {
+  color: hsl(232, 100%, 99%);
+}
+.input .input__lock {
+  margin-right: 1rem;
+  color: hsl(232, 100%, 99%);
+  transition: 0.4s;
+}
+.input .input__lock,
+.input .input__hide {
+  font-size: 2rem;
+  z-index: 1;
+}
+.input .input__hide {
+  color: hsl(232, 54%, 43%);
+  cursor: pointer;
+}
+.input .input__overlay {
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: hsl(232, 100%, 99%);
+  border-radius: 50%;
+  position: absolute;
+  right: 0.85rem;
+  z-index: 0;
+  transition: 0.4s;
+}
+
+.overlay-content {
+  width: 100% !important;
+  height: 100% !important;
+  right: 0 !important;
+  border-radius: 0.5rem !important;
+  transition: 0.4s;
+}
+.overlay-content ~ .input__lock {
+  color: hsl(232, 54%, 11%);
+}
+.overlay-content ~ .input__password::-moz-placeholder {
+  color: hsl(232, 8%, 35%);
+}
+.overlay-content ~ .input__password,
+.overlay-content ~ .input__password::placeholder {
+  color: hsl(232, 8%, 35%);
+}
+
+@media screen and (min-width: 576px) {
+  .input {
+    width: 35rem;
+  }
+  .input .input__password {
+    width: 100%;
+  }
+}/*# sourceMappingURL=app.css.map */
