@@ -1,7 +1,7 @@
 # Show-And-Hide-Password
 ![viewfinal](https://raw.githubusercontent.com/Amirreza-Rashvand-Developer/Show-And-Hide-Password/main/preview.png)
 
-- [Demo Project](https://amirreza-rashvand-developer.github.io/Accordion-With-JS/)
+- [Demo Project](https://amirreza-rashvand-developer.github.io/Show-And-Hide-Password/)
 
 - Developed by amirreza rashvand
 
